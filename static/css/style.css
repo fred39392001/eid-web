@@ -14,3 +14,13 @@ body {
 .logo-md {
   width: 65%;
 }
+
+.bg-cover {
+  background-size: cover;
+  background-position: center center;
+}
+
+.bg-contain {
+  background-size: contain;
+  background-position: center center;
+}

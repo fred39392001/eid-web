@@ -12,6 +12,10 @@ function setPageInfo() {
     setInfoEid();
   } else if (page.includes("issues")) {
     $("#nav-issues").addClass("active");
+    
+    // List issues
+    list_issues(getCookie("username"));
+    
   } else if (page == "foot_print.html") {
     $("#nav-foot_print").addClass("active");
   } else if (page == "wallet.html") {

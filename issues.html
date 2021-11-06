@@ -1,5 +1,8 @@
 <html>
   <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -27,55 +30,56 @@
   </head>
 
   <body onload="init();">
-
-  <!-- namecard -->
-  <div class="container-fluid justify-content-center" >
-    <div class="row no-gutters" style="height: 100%;">
-      <div
-        class="card mb-3 card-bg-eid rounded-0 card-shadow border-warning"
-        style="min-width:100%;"> 
-          <div class="card-body" style="width:100%; height: 100%;">
-
-          <!-- navbar --!>
-          <ul class="nav nav-tabs">
-            <li class="nav-item">
-              <a id="nav-eid" class="nav-link" aria-current="page" href="/eid-web/eid.html">身份證</a>
-            </li>
-            <li class="nav-item">
-              <a id="nav-issues" class="nav-link" href="/eid-web/issues.html">永續合作</a>
-            </li>
-            <li class="nav-item">
-              <a id="nav-foor_print" class="nav-link" href="/eid-web/foot_print.html">數位足跡</a>
-            </li>
-            <li class="nav-item">
-              <a id="nav-wallet" class="nav-link" aria-current="page" href="/eid-web/wallet.html">錢包</a>
-            </li>
-          </ul>
-
-	  <br><br><br>
-
-            <div class="row" style="background-color:;">
-              <div class="col-md-4">
-                <div class="card p-3 mb-2">
-		  <a href = "#" onclick="issues(1)"><img src="static/imgs/pages/me.png" width="50%" height="50%"></a>
-	        </div> <!-- card p-3 mb-2-->
-              </div> <!-- col-md-4 -->
-              <div class="col-md-4">
-                <div class="card p-3 mb-2">
-		  <a href = "#" onclick="issues(2)"><img src="static/imgs/pages/me.png" width="50%" height="50%"></a>
-	        </div> <!-- card p-3 mb-2-->
-              </div> <!-- col-md-4 -->
-              <div class="col-md-4">
-                <div class="card p-3 mb-2">
-  		  <a href = "#" onclick="issues(3)"><img src="static/imgs/pages/me.png" width="50%" height="50%"></a>
-	        </div> <!-- card p-3 mb-2-->
-              </div> <!-- col-md-4 -->
-	    </div> <!-- row -->
-
-	  </div> <!-- card-body-->
-      </div> <!-- card mb-3 card-bg-eid rounded-0 card-shadow border-warning --> 
+    <div class="container-fluid border border-warning border-width-lg min-vh-100">
+      <div class="row">
+        <div class="col">
+          <nav class="navbar navbar-expand-sm navbar-light bg-white align-items-center">
+            <a class="navbar-brand" href="index.html">
+              <img class="logo-md" src="static/imgs/eID-logo.png">
+            </a>
+              <ul class="nav nav-pills mr-auto">
+                <li class="nav-item">
+                  <a class="nav-link" href="/eid-web/eid.html">身分證</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" href="/eid-web/issues.html">永續合作</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/eid-web/foot_print.html">數位足跡</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/eid-web/wallet.html">錢包</a>
+                </li>
+              </ul>
+              <a class="navbar-brand" href="#">
+                <img style="width: 45px"src="static/imgs/user-edit-solid.svg">
+              </a>
+          </nav>
+          <div class="row mt-3">
+            <div class="col-sm-4">
+              <div class="card">
+                <a href = "#" onclick="issues(1)" class="d-block">
+                  <div class="bg-contain" style="background-image: url(static/imgs/company-1.png); height: 160px; background-repeat: no-repeat" ></div>
+                </a>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="card">
+                <a href = "#" onclick="issues(2)" class="d-block">
+                  <div class="bg-contain" style="background-image: url(static/imgs/company-2.jpg); height: 160px; background-repeat: no-repeat" ></div>
+                </a>
+              </div>
+            </div>
+            <div class="col-sm-4">
+              <div class="card">
+                <a href = "#" onclick="issues(3)" class="d-block">
+                  <div class="bg-contain" style="background-image: url(static/imgs/company-3.jpg); height: 160px; background-repeat: no-repeat" ></div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-  </div> <!-- container -->
-
   </body>
 </html>

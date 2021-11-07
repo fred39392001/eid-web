@@ -1,9 +1,16 @@
-body {
-font-family: "微軟正黑體", "Microsoft JhengHei", arial, sans-serif;
+html { 
+  height:100%; 
 }
 
-.border-warning{
-border-width: 2px;
+body {
+  height:100%;
+  margin: 0px;
+  padding: 0px;
+  font-family: "微軟正黑體", "Microsoft JhengHei", arial, sans-serif;
+}
+
+.border-width-lg{
+border-width: 8px !important;
 }
 
 .card-bg-eid{
@@ -12,4 +19,18 @@ background-color: white;
 
 .card-shadow{
 box-shadow: 15px 15px 10px rgba(0, 0, 0, 0.16);
+}
+
+.logo-md {
+width: 65%;
+}
+
+.bg-cover {
+background-size: cover;
+background-position: center center;
+}
+
+.bg-contain {
+background-size: contain;
+background-position: center center;
 }

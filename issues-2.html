@@ -15,6 +15,7 @@
     <script src="static/js/cookies.js"></script>
     <script src="static/js/navbar.js"></script>
     <script src="static/js/auth.js"></script>
+    <script src="static/js/issues.js"></script>
     <script src="static/js/set-page-info.js"></script>
     <script src="static/js/init.js"></script>
 
@@ -23,22 +24,24 @@
         var value_15 = document.getElementById("sdgs-15").value;
         var value_17 = document.getElementById("sdgs-17").value;
 
+	// Get target
+        var uuid_target = getCookie("target");
+        var obj_target = JSON.parse(getCookie(uuid_target));
+
+
 	if (value_15 != "") {
-          setCookie("value_15", value_15, 1);
+          obj_target.ticket.s15 = 1;
 	}
 	if (value_17 != "") {
-          setCookie("value_17", value_17, 1);
+          obj_target.ticket.s17 = 1;
 	}
 
+	// Update ticket
+        update_ticket(uuid_target, obj_target);
+
 	if (new_item == 0) {
-          // Localhost only
-          // window.location.replace("issues-3.html");
-          // Git page
           window.location.replace("/eid-web/issues-3.html");
 	} else {
-          // Localhost only
-          window.location.replace("issues-new.html");
-          // Git page
           window.location.replace("/eid-web/issues-new.html");
 	}
       }
@@ -78,7 +81,7 @@
               </div>
               <div class="col-10">
                 <label for="">支持，</label>
-                <input type="text" class="w-75" style="border:1px; border-bottom-style: solid;border-top-style: none;border-left-style:none;border-right-style:none;">
+                <input id="sdgs-15" type="text" class="w-75" style="border:1px; border-bottom-style: solid;border-top-style: none;border-left-style:none;border-right-style:none;">
               </div>
             </div>
             <div class="row align-items-center mt-3">
@@ -87,15 +90,15 @@
               </div>
               <div class="col-10">
                 <label for="">支持，</label>
-                <input type="text" class="w-75" style="border:1px; border-bottom-style: solid;border-top-style: none;border-left-style:none;border-right-style:none;">
+                <input id="sdgs-17" type="text" class="w-75" style="border:1px; border-bottom-style: solid;border-top-style: none;border-left-style:none;border-right-style:none;">
               </div>
             </div>
             <div class="row justify-content-center my-3">
               <div class="col-3">
-                <a href="/eid-web/issues-3.html" class="btn btn-primary btn-block">提交</a>
+                <a href="/eid-web/issues-3.html" class="btn btn-primary btn-block" onclick = "issue_next_page(0)">提交</a>
               </div>
               <div class="col-3">
-                <a href="/eid-web/issues-new.html" class="btn btn-primary btn-block">新增指標</a>
+                <a href="/eid-web/issues-new.html" class="btn btn-primary btn-block" onclick = "issue_next_page(1)">新增指標</a>
               </div>
             </div>
           </div>

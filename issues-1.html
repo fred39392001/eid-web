@@ -15,6 +15,7 @@
     <script src="static/js/cookies.js"></script>
     <script src="static/js/navbar.js"></script>
     <script src="static/js/auth.js"></script>
+    <script src="static/js/issues.js"></script>
     <script src="static/js/set-page-info.js"></script>
     <script src="static/js/init.js"></script>
 
@@ -24,21 +25,24 @@
         var value_8 = document.getElementById("sdgs-8").value;
         var value_11 = document.getElementById("sdgs-11").value;
 
+	// Get target
+        var uuid_target = getCookie("target");
+        var obj_target = JSON.parse(getCookie(uuid_target));
+
 	if (value_4 != "") {
-          setCookie("value_4", value_4, 1);
-	}
+ 	  obj_target.ticket.s4 = 1;
+        }
 	if (value_8 != "") {
-          setCookie("value_8", value_8, 1);
+          obj_target.ticket.s8 = 1;
 	}
 	if (value_11 != "") {
-          setCookie("value_11", value_11, 1);
+          obj_target.ticket.s11 = 1;
 	}
 
-        // Localhost only
-        // window.location.replace("issues-2.html");
-        // Git page
+	// Update ticket
+        update_ticket(uuid_target, obj_target);
+
         window.location.replace("/eid-web/issues-2.html");
-        
       }
     </script>
   </head>
@@ -49,11 +53,11 @@
   <div class="container-fluid border border-warning border-width-lg min-vh-100">
     <div class="row">
       <div class="col">
-        <nav class="navbar navbar-expand-sm navbar-light bg-white align-items-center">
-          <a class="navbar-brand" href="index.html">
-            <img class="logo-md"  src="static/imgs/eID-logo.png">
+        <nav class="navbar navbar-expand-sm navbar-light bg-white align-items-center px-0">
+          <a class="navbar-brand mr-0" href="index.html">
+            <img class="logo-md" src="static/imgs/eID-logo.png">
           </a>
-            <ul class="nav nav-pills mr-auto">
+            <ul class="nav nav-tabs w-100 mr-3">
               <li class="nav-item">
                 <a class="nav-link" href="/eid-web/eid.html">身分證</a>
               </li>
@@ -67,7 +71,7 @@
                 <a class="nav-link" href="/eid-web/wallet.html">錢包</a>
               </li>
             </ul>
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand mr-0" href="#">
               <img style="width: 45px"src="static/imgs/user-edit-solid.svg">
             </a>
         </nav>
@@ -78,7 +82,7 @@
             </div>
             <div class="col-10">
               <label for="">支持，</label>
-              <input type="text" class="w-75" style="border:1px; border-bottom-style: solid;border-top-style: none;border-left-style:none;border-right-style:none;">
+              <input id="sdgs-4" type="text" class="w-75" style="border:1px; border-bottom-style: solid;border-top-style: none;border-left-style:none;border-right-style:none;">
             </div>
           </div>
           <div class="row align-items-center mt-3">
@@ -87,7 +91,7 @@
             </div>
             <div class="col-10">
               <label for="">支持，</label>
-              <input type="text" class="w-75" style="border:1px; border-bottom-style: solid;border-top-style: none;border-left-style:none;border-right-style:none;">
+              <input id="sdgs-8" type="text" class="w-75" style="border:1px; border-bottom-style: solid;border-top-style: none;border-left-style:none;border-right-style:none;">
             </div>
           </div>
           <div class="row align-items-center mt-3">
@@ -96,12 +100,12 @@
             </div>
             <div class="col-10">
               <label for="">支持，</label>
-              <input type="text" class="w-75" style="border:1px; border-bottom-style: solid;border-top-style: none;border-left-style:none;border-right-style:none;">
+              <input id="sdgs-11" type="text" class="w-75" style="border:1px; border-bottom-style: solid;border-top-style: none;border-left-style:none;border-right-style:none;">
             </div>
           </div>
           <div class="row justify-content-center my-3">
             <div class="col-3">
-              <a href="/eid-web/issues-2.html" class="btn btn-primary btn-block">下一步</a>
+              <a href="/eid-web/issues-2.html" class="btn btn-primary btn-block" onclick = "issue_next_page()">下一步</a>
             </div>
           </div>
         </div>

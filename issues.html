@@ -14,17 +14,13 @@
     <script src="static/js/cookies.js"></script>
     <script src="static/js/navbar.js"></script>
     <script src="static/js/auth.js"></script>
+    <script src="static/js/issues.js"></script>
     <script src="static/js/set-page-info.js"></script>
     <script src="static/js/init.js"></script>
     <script>
       function issues(project_id) {
         setCookie("project_id", project_id, 1);
-
-	// Localhost only
-        // window.location.replace("issues-1.html");
-        // Git page
         window.location.replace("/eid-web/issues-1.html");
-
       }
     </script>
   </head>
@@ -55,28 +51,8 @@
                 <img style="width: 45px"src="static/imgs/user-edit-solid.svg">
               </a>
           </nav>
-          <div class="row mt-5">
-            <div class="col-sm-4">
-              <div class="card">
-                <a href = "#" onclick="issues(1)" class="d-block">
-                  <div class="bg-contain" style="background-image: url(static/imgs/company-1.png); height: 160px; background-repeat: no-repeat" ></div>
-                </a>
-              </div>
-            </div>
-            <div class="col-sm-4">
-              <div class="card">
-                <a href = "#" onclick="issues(2)" class="d-block">
-                  <div class="bg-contain" style="background-image: url(static/imgs/company-2.jpg); height: 160px; background-repeat: no-repeat" ></div>
-                </a>
-              </div>
-            </div>
-            <div class="col-sm-4">
-              <div class="card">
-                <a href = "#" onclick="issues(3)" class="d-block">
-                  <div class="bg-contain" style="background-image: url(static/imgs/company-3.jpg); height: 160px; background-repeat: no-repeat" ></div>
-                </a>
-              </div>
-            </div>
+          
+          <div class="row mt-5" id="issues-list">
           </div>
         </div>
       </div>

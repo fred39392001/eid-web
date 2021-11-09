@@ -13,12 +13,14 @@ body {
 border-width: 8px !important;
 }
 
-.card-bg-eid{
-background-color: white;
+.bg-cover {
+  background-size: cover;
+  background-position: center center;
 }
 
-.card-shadow{
-box-shadow: 15px 15px 10px rgba(0, 0, 0, 0.16);
+.bg-contain {
+  background-size: contain;
+  background-position: center center;
 }
 
 .logo-md {

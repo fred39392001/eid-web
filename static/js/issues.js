@@ -112,8 +112,8 @@ function set_task_in_page(obj) {
 
   var img = document.createElement("img");
   img.src = obj.thumbnail;
-  img.setAttribute("width", "350");
-  img.setAttribute("height", "350");
+  img.setAttribute("width", "160");
+  img.setAttribute("height", "160");
 
   var a = document.createElement("a"); 
   a.src = obj.thumbnail;

@@ -4,23 +4,37 @@ html {
 
 body {
   height:100%;
+  margin: 0px;
+  padding: 0px;
   font-family: "微軟正黑體", "Microsoft JhengHei", arial, sans-serif;
 }
 
-.border-width-lg {
-  border-width: 8px !important;
+.border-width-lg{
+border-width: 8px !important;
 }
 
 .logo-md {
   width: 80%;
 }
 
-.bg-cover {
+.bg-cover {<<<<<<< wallet
+26
+ 
+
   background-size: cover;
   background-position: center center;
 }
 
+.logo-md {
+width: 80%;
+}
+
+.bg-cover {
+background-size: cover;
+background-position: center center;
+}
+
 .bg-contain {
-  background-size: contain;
-  background-position: center center;
+background-size: contain;
+background-position: center center;
 }

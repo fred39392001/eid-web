@@ -13,12 +13,16 @@ body {
 border-width: 8px !important;
 }
 
-.card-bg-eid{
-background-color: white;
+.logo-md {
+  width: 80%;
 }
 
-.card-shadow{
-box-shadow: 15px 15px 10px rgba(0, 0, 0, 0.16);
+.bg-cover {<<<<<<< wallet
+26
+ 
+
+  background-size: cover;
+  background-position: center center;
 }
 
 .logo-md {

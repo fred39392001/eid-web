@@ -1,5 +1,9 @@
-<html>
-  <head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -7,6 +11,7 @@
       integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" 
       integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <link href="../static/css/style.css" rel="stylesheet" type="text/css">
     <script src="../static/js/cookies.js"></script>
     <script>
     $(function () {
@@ -42,71 +47,33 @@
   </head>
 
   <body>
-  <!-- namecard -->
-  <div class="container-fluid justify-content-center">
-
-    <div
-      class="card mb-3 card-bg-eid rounded-0 card-shadow border-warning"
-      style="width: 100% ;height: 100%;">
-      <div class="row no-gutters">
-        <div class="col-md-7">
-          <div class="card-body">
-          
-          <!-- navbar --!>
-          <ul class="nav nav-tabs">
-            <li class="nav-item">
-              <a id="nav-eid" class="nav-link" aria-current="page" href="/eid-web/eid.html">身份證</a>
-            </li>
-            <li class="nav-item">
-              <a id="nav-issues" class="nav-link" href="/eid-web/issues.html">永續合作</a>
-            </li>
-            <li class="nav-item">
-              <a id="nav-foor_print" class="nav-link" href="/eid-web/foot_print.html">數位足跡</a>
-            </li>
-            <li class="nav-item">
-              <a id="nav-wallet" class="nav-link" aria-current="page" href="/eid-web/wallet.html">錢包</a>
-            </li>
-          </ul>
-          <br>
-
-          <div class="h6 text-warning d-none d-md-block">
-            <p class="mr-3  mb-0">數位鎮民身份證</p>
-            <p>The eID card for digital townee.</p>
-          </div>
-         
-          <div class="h6 text-warning d-none d-md-block">
-            <p id="message" class="mr-3  mb-0" style="color:red"></p>
-          </div>
-	  
-	  <div class="text-warning d-block d-md-none">
-              <p class="mr-3 d-none d-sm-block mb-0">數位鎮民身份證</p>
-              <p>The eID card for digital townee.</p>
-          </div>
-
-	  <form>
-	    <div class="form-group">
-              <label for="email">電子郵件：</label>
-              <input type="email" class="form-control" id="email" aria-describedby="email" placeholder="電子郵件">
+    <div class="container-fluid border border-warning border-width-lg min-vh-100">
+      <div class="row">
+        <div class="col">
+          <nav class="navbar navbar-light bg-white">
+            <a class="navbar-brand" href="index.html">
+              <img class="mt-3 logo-sm" src="../static/imgs/eID-logo.png">
+            </a>
+          </nav>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-6 bg-light">
+          <form class="my-3">
+            <div class="form-group">
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="電子郵件">
             </div>
-  
-	    <div class="form-group">
-              <label for="password">密碼：</label>
-              <input type="password" class="form-control" id="password" placeholder="密碼">
+            <div class="form-group">
+              <input type="password" class="form-control" id="exampleInputPassword1" placeholder="密碼">
             </div>
-            
-	    <div class="form-group">
-              <label for="username">姓名：</label>
-              <input type="username" class="form-control" id="username" aria-describedby="username" placeholder="姓名">
+            <div class="form-group">
+              <input type="password" class="form-control" id="exampleInputPassword1" placeholder="姓名">
             </div>
-	    <button type="submit" class="btn btn-primary">註冊</button>
+            <button type="submit" class="btn btn-block btn-success">註冊</button>
           </form>
-          
-	</div> <!-- col-md-7 -->
-      </div> <!-- row no-gutters -->
-      
-    </div> <!-- card mb-3 card-bg-eid rounded-0 card-shadow border-warning --> 
-
-    </div> <!-- container -->
-
+        </div>
+      </div>
+      </div>
+    </div>
   </body>
 </html>

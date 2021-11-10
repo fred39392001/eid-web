@@ -37,6 +37,13 @@ function setPageInfo() {
     
   } else if (page == "foot_print.html") {
     $("#nav-foot_print").addClass("active");
+
+    // Submit weight and clear all ticket
+    // TODO: clear all tickets
+    submit_weight();
+    
+    // Get project weight
+    
   } else if (page == "wallet.html") {
     $("#nav-wallet").addClass("active");
   }

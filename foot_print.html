@@ -1,5 +1,9 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
   <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -11,50 +15,153 @@
     <script src="static/js/cookies.js"></script>
     <script src="static/js/auth.js"></script>
     <script src="static/js/navbar.js"></script>
+    <script src="static/js/foot_print.js"></script>
     <script src="static/js/set-page-info.js"></script>
     <script src="static/js/init.js"></script>
   </head>
 
   <body onload="init();">
 
-  <!-- namecard -->
-  <div class="container-fluid justify-content-center">
-
-    <div
-      class="card mb-3 card-bg-eid rounded-0 card-shadow border-warning"
-      style="max-width: 100%; height:100%;">
-      <div class="row no-gutters">
-        <div class="card-body" style="background-color:;">
-
-          <!-- navbar --!>
-          <ul class="nav nav-tabs">
-            <li class="nav-item">
-              <a id="nav-eid" class="nav-link" aria-current="page" href="/eid-web/eid.html">身份證</a>
-            </li>
-            <li class="nav-item">
-              <a id="nav-issues" class="nav-link" href="/eid-web/issues.html">永續合作</a>
-            </li>
-            <li class="nav-item">
-              <a id="nav-foot_print" class="nav-link" href="/eid-web/foot_print.html">數位足跡</a>
-            </li>
-            <li class="nav-item">
-              <a id="nav-wallet" class="nav-link" aria-current="page" href="/eid-web/wallet.html">錢包</a>
-            </li>
-          </ul>
-
-          <br>
-
-	<!-- report -->
-	<div class="col-md-8">
-          <canvas id="polar-chart"></canvas> 
-	</div>
-	<!-- report -->
-
-        </div> <!-- card-->
-      </div> <!-- row no-gutters -->    
-    </div> <!-- card mb-3 card-bg-eid rounded-0 card-shadow border-warning --> 
-  </div> <!-- container -->
-
+    <div class="container-fluid border border-warning border-width-lg min-vh-100">
+      <div class="row">
+        <div class="col">
+          <nav class="navbar navbar-expand-sm navbar-light bg-white align-items-center px-0">
+            <a class="navbar-brand mr-0" href="index.html">
+              <img class="logo-md" src="static/imgs/eID-logo.png">
+            </a>
+              <ul class="nav nav-tabs w-100 mr-3">
+                <li class="nav-item">
+                  <a class="nav-link" href="/eid-web/eid.html">身分證</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/eid-web/issues.html">永續合作</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" href="/eid-web/foot_print.html">數位足跡</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/eid-web/wallet.html">錢包</a>
+                </li>
+              </ul>
+              <a class="navbar-brand mr-0" href="#">
+                <img style="width: 45px"src="static/imgs/user-edit-solid.svg">
+              </a>
+          </nav>
+          <div class="container">
+            <div class="row justify-content-center mt-4">
+              <div class="col-6">
+                <div style="height: 180px; overflow-y: scroll;" class="border p-2">
+                  <table class="table table-striped">
+                    <thead>
+                      <tr>
+                        <th scope="col" class="text-center">指標</th>
+                        <th scope="col" class="text-center">個人</th>
+                        <th scope="col" class="text-center">專案</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+			<tr>
+		          <td><img src="static/imgs/SDGS/E_WEB_01.png" width="40px" height="40px"/>
+		          <td id="persion_s1">0 
+		          <td id="project_s1">0
+		        </td>
+			<tr>
+		          <td><img src="static/imgs/SDGS/E_WEB_02.png" width="40px" height="40px"/></td>
+		          <td id="persion_s2">0
+		          <td id="project_s2">0
+		        </td>
+		        </tr>
+			<tr>
+		          <td><img src="static/imgs/SDGS/E_WEB_03.png" width="40px" height="40px"/></td>
+		          <td id="persion_s3">0
+		          <td id="project_s3">0
+		        </td>
+			<tr>
+		          <td><img src="static/imgs/SDGS/E_WEB_04.png" width="40px" height="40px"/></td>
+		          <td id="persion_s4">0
+		          <td id="project_s4">0
+		        </td>
+			<tr>
+		          <td><img src="static/imgs/SDGS/E_WEB_05.png" width="40px" height="40px"/></td>
+		          <td id="persion_s5">0
+		          <td id="project_s5">0
+		        </td>
+			<tr>
+		          <td><img src="static/imgs/SDGS/E_WEB_06.png" width="40px" height="40px"/></td>
+		          <td id="persion_s6">0
+		          <td id="project_s6">0
+		        </td>
+			<tr>
+		          <td><img src="static/imgs/SDGS/E_WEB_07.png" width="40px" height="40px"/></td>
+		          <td id="persion_s7">0
+		          <td id="project_s7">0
+		        </td>
+			<tr>
+		          <td><img src="static/imgs/SDGS/E_WEB_08.png" width="40px" height="40px"/></td>
+		          <td id="persion_s8">0
+		          <td id="project_s8">0
+		        </td>
+			<tr>
+		          <td><img src="static/imgs/SDGS/E_WEB_09.png" width="40px" height="40px"/></td>
+		          <td id="persion_s9">0
+		          <td id="project_s9">0
+		        </td>
+			<tr>
+		          <td><img src="static/imgs/SDGS/E_WEB_10.png" width="40px" height="40px"/></td>
+		          <td id="persion_s10">0
+		          <td id="project_s10">0
+		        </td>
+			<tr>
+		          <td><img src="static/imgs/SDGS/E_WEB_11.png" width="40px" height="40px"/></td>
+		          <td id="persion_s11">0
+		          <td id="project_s11">0
+		        </td>
+			<tr>
+		          <td><img src="static/imgs/SDGS/E_WEB_12.png" width="40px" height="40px"/></td>
+		          <td id="persion_s12">0
+		          <td id="project_s12">0
+		        </td>
+			<tr>
+		          <td><img src="static/imgs/SDGS/E_WEB_13.png" width="40px" height="40px"/></td>
+		          <td id="persion_s13">0
+		          <td id="project_s13">0
+		        </td>
+			<tr>
+		          <td><img src="static/imgs/SDGS/E_WEB_14.png" width="40px" height="40px"/></td>
+		          <td id="persion_s14">0
+		          <td id="project_s14">0
+		        </td>
+			<tr>
+		          <td><img src="static/imgs/SDGS/E_WEB_15.png" width="40px" height="40px"/></td>
+		          <td id="persion_s15">0
+		          <td id="project_s15">0
+		        </td>
+			<tr>
+		          <td><img src="static/imgs/SDGS/E_WEB_16.png" width="40px" height="40px"/></td>
+		          <td id="persion_s16">0
+		          <td id="project_s16">0
+		        </td>
+			<tr>
+		          <td><img src="static/imgs/SDGS/E_WEB_17.png" width="40px" height="40px"/></td>
+		          <td id="persion_s17">0
+		          <td id="project_s17">0
+		        </td>
+                    </tbody>
+                  </table>
+                </div>
+                <p class="mt-2 mb-0" style="font-size: 12px">個人 : 個人參與永續合作貢獻的權重。</p>
+                <p class="mb-0" style="font-size: 12px">專案 : 全體參與者於永續合作中累積的權重。</p>
+              </div>
+              <div class="col-6">
+                <div class="text-center w-100">
+                  <img style="max-width: 100%;" src="static/imgs/Digital population.png">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 
 </html>

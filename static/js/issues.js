@@ -137,8 +137,9 @@ function get_task_info(req_uuid_task) {
        setCookie(obj.uuid, JSON.stringify(obj), 1);
 
        // Set ticket
-       var dataJSON = {"s1":0, "s2":0, "s3":0, "s4":0, "s5":0, "s6":0, "s7":0, 
-         "s8":0, "s9":0, "s10":0, "s11":0, "s12":0, "s13":0, "s14":0, "s15":0, "s16":0, "s17":0};
+       var dataJSON = {"s1":"0", "s2":"0", "s3":"0", "s4":"0", "s5":"0", "s6":"0", "s7":"0", 
+         "s8":"0", "s9":"0", "s10":"0", "s11":"0", "s12":"0", "s13":"0", "s14":"0", "s15":"0", "s16":"0", "s17":"0"};
+       
        obj.ticket =  dataJSON;
        update_ticket(req_uuid_task, obj);
 
@@ -166,7 +167,6 @@ function get_user_uuid_tasks(username) {
        const obj = JSON.parse(returnData);
        // Set task info
        for (var i = 0; i < obj.uuid.length; i++)  {
-        
          var target_ticket = "";
          if (getCookie(obj.uuid[i]) != "") {
            var obj_uuid = JSON.parse(getCookie(obj.uuid[i]));

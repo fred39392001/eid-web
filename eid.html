@@ -1,5 +1,9 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
   <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -16,80 +20,47 @@
   </head>
 
   <body onload="init();">
-
-  <!-- namecard -->
-  <div class="container-fluid justify-content-center">
-
-    <div
-      class="card mb-3 card-bg-eid rounded-0 card-shadow border-warning"
-      style="width: 100% ;height: 100%;">
-      <div class="row no-gutters">
-        <div class="col-md-7">
-          <div class="card-body">
-            
-	  <!-- navbar --!>
-	  <ul class="nav nav-tabs">
-            <li class="nav-item">
-              <a id="nav-eid" class="nav-link" aria-current="page" href="/eid-web/eid.html">身份證</a>
-            </li>
-            <li class="nav-item">
-              <a id="nav-issues" class="nav-link" href="/eid-web/issues.html">永續合作</a>
-            </li>
-            <li class="nav-item">
-              <a id="nav-foor_print" class="nav-link" href="/eid-web/foot_print.html">數位足跡</a>
-            </li>
-            <li class="nav-item">
-              <a id="nav-wallet" class="nav-link" aria-current="page" href="/eid-web/wallet.html">錢包</a>
-            </li>
-          </ul>
-          <br>
-
-          <div class="h6 text-warning d-none d-md-block">
-            <p class="mr-3  mb-0">數位鎮民身份證</p>
-            <p>The eID card for digital townee.</p>
+    <div class="container-fluid border border-warning border-width-lg min-vh-100">
+      <div class="row">
+        <div class="col">
+          <nav class="navbar navbar-expand-sm navbar-light bg-white align-items-center px-0">
+            <a class="navbar-brand mr-0" href="index.html">
+              <img class="logo-md" src="static/imgs/eID-logo.png">
+            </a>
+              <ul class="nav nav-tabs w-100 mr-3">
+                <li class="nav-item">
+                  <a class="nav-link active" href="/eid-web/eid.html">身分證</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/eid-web/issues.html">永續合作</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/eid-web/foot_print.html">數位足跡</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/eid-web/wallet.html">錢包</a>
+                </li>
+              </ul>
+              <a class="navbar-brand mr-0" href="#">
+                <img style="width: 45px"src="static/imgs/user-edit-solid.svg">
+              </a>
+          </nav>
+          <div class="container">
+              <div class="row mt-2 align-items-center">
+                <div class="col-6">
+                  <p class="mb-0">數位鎮民身份證</p>
+                  <p>The eID card for digital townie</p>
+		  <div id="username" class="h3"><div id="userid" style="display: inline"> </div></div>
+                </div>
+                <div class="col-6">
+                  <div class="card">
+                    <div class="bg-contain" style="background-image: url(static/imgs/pages/me.png); height: 250px; background-repeat: no-repeat" ></div>
+                  </div>
+                </div>
+              </div>
           </div>
-
-          <div class="text-warning d-block d-md-none">
-              <p class="mr-3 d-none d-sm-block mb-0">數位鎮民身份證</p>
-              <p>The eID card for digital townee.</p>
-          </div>
-
-	  <div id="username" class="h3 mt-lg-5 pt-lg-5 d-none d-lg-block">證號：<div id="userid" style="display: inline"> </div></div>
-	  <div class="h3 mt-md-4 pt-md-4 d-none d-md-block d-lg-none ">證號：<div id="userid" style="display: inline"> </div> </div>
-          <div class="d-lg-flex mt-4">
-            <p class="mr-lg-3 d-none d-lg-block">職業： 鎮民</p>
-	    <p id="balance" class="d-none d-lg-block">光幣：<div id="balance"> 0 </div> 枚</p>
-          </div>
-
-          <div class="d-flex d-lg-none mt-3">
-              <img
-                src="static/imgs/pages/career.svg"
-                class="mr-1"
-                style="max-height: 20px"
-                alt="職業"
-              />
-              <p class="mr-3">鎮民</p>
-              <img
-                src="static/imgs/pages/coin.svg"
-                class="mr-1"
-                style="max-height: 20px;"
-                alt="光幣"
-              />
-	      <p> <div id="balance"> 0 </div> 枚</p>
-          </div> <!-- d-flex d-lg-none mt-3-->
-        </div> <!-- col-md-7 -->
-      </div> <!-- row no-gutters -->
-
-      <div class="col-md-5">
-        <p class="mr-3 mb-3 mt-3"> <!-- WIP -->
-          <img src="static/imgs/pages/me.png" class="card-img" alt="" style="padding-left: 20px;  padding-right: 20px; width:90%; height:90%;">
-      </div> <!-- col-md-5 -->
-    </div> <!-- card mb-3 card-bg-eid rounded-0 card-shadow border-warning -->
-
-    </div> <!-- container -->
-
-
-
-
+        </div>
+      </div>
+    </div>
   </body>
 </html>

@@ -13,26 +13,19 @@ body {
 border-width: 8px !important;
 }
 
-.card-bg-eid{
-background-color: white;
+.border-width-lg{
+border-width: 8px !important;
 }
 
-.card-shadow{
-box-shadow: 15px 15px 10px rgba(0, 0, 0, 0.16);
+.logo-md {
+  width: 80%;
+.logo-sm {
+width: 65%;
 }
 .logo-sm {
 width: 65%;
 }
-
-.logo-md {
-width: 80%;
 }
-
-.bg-cover {
-background-size: cover;
-background-position: center center;
-}
-
 .bg-contain {
 background-size: contain;
 background-position: center center;
